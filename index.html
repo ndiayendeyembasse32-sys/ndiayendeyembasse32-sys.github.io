@@ -2,18 +2,106 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Ndeye Mbasse Ndiaye</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
-        h1 { color: #2c3e50; }
-        p { color: #666; font-size: 1.2em; }
-        .btn { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
+        header { background-color: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
+        h1 { margin: 0; font-size: 2.5em; }
+        .subtitle { color: #ecf0f1; font-size: 1.2em; margin-top: 10px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        
+        .btn { display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        .btn:hover { background-color: #2980b9; }
+
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
+        .project-card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-title { color: #2c3e50; font-size: 1.5em; margin-bottom: 10px; }
+        .tags { margin-top: 15px; }
+        .tag { background-color: #e9ecef; padding: 5px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 5px; color: #555; }
+        
+        footer { text-align: center; margin-top: 50px; padding: 20px; color: #666; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon Portfolio ! 👋</h1>
-    <p>Je suis Ndeye Mbasse Ndiaye, étudiante en Tech à l'EPSI Paris.</p>
-    <p>Site en construction... Mes projets arrivent bientôt ! 🚀</p>
-    <a href="https://www.linkedin.com/in/ndeye-mbasse-ndiaye-a62281389?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="btn">Mon LinkedIn</a>
+
+    <header>
+        <h1>Ndeye Mbasse Ndiaye</h1>
+        <p class="subtitle">Étudiante IT & Future Développeuse Web | EPSI Paris</p>
+        <a href="https://www.linkedin.com/in/ton-vrai-lien-ici/" class="btn">Mon LinkedIn</a>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; color: #2c3e50;">Mes Projets Réalisés</h2>
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h3 class="project-title">🛒 SmartBike E-Commerce</h3>
+                <p>Développement Full-Stack d'une plateforme de vente de vélos électriques.</p>
+                <ul>
+                    <li>Conception BDD (MCD/MLD) & Gestion clients.</li>
+                    <li>Architecture MVC & PHP Natif.</li>
+                    <li>Interface responsive & Catalogue dynamique.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">HTML/CSS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">🔐 Infrastructure Sécurisée</h3>
+                <p>Déploiement d'une architecture réseau d'entreprise complète.</p>
+                <ul>
+                    <li>Pare-feu pfSense & VPN Site-à-Site.</li>
+                    <li>Monitoring serveurs avec Zabbix.</li>
+                    <li>Sécurité & Détection d'intrusions (Wazuh).</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Réseau</span>
+                    <span class="tag">pfSense</span>
+                    <span class="tag">Linux</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">📡 Dashboard IoT Connecté</h3>
+                <p>Création d'un flux de données temps réel pour capteurs.</p>
+                <ul>
+                    <li>Collecte de données via MQTT.</li>
+                    <li>Visualisation sur Dashboard Node-RED.</li>
+                    <li>Simulation de capteurs connectés.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Node-RED</span>
+                    <span class="tag">MQTT</span>
+                    <span class="tag">IoT</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">🐍 Algorithmes & Outils</h3>
+                <p>Développement de scripts d'automatisation et de logique.</p>
+                <ul>
+                    <li>Simulation de File d'attente (FIFO).</li>
+                    <li>Outil de chiffrage (César).</li>
+                    <li>Manipulation de structures de données.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Algo</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>©️ 2026 Ndeye Mbasse Ndiaye - Fait avec passion à Paris 🇫🇷</p>
+    </footer>
+
 </body>
 </html>
