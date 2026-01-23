@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscription</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="img" href="icone id.png">
+</head>
+<body1>
+    <header1>
+        <H1_1>Inscription </H1_1>
+        <img src="icone id.png" alt="">
+       <div class="container">
+        <div class="formulaire">
+            <div class="icon">
+                <i class="fa fa-user"></i>
+            </div>
+            <form action="inscription.php" method="post">
+                <label>Nom :</label>
+                <input type="text" name="nom" placeholder="Entrez votre nom" required>
+
+                <label>Prénom :</label>
+                <input type="text" name="prenom" placeholder="Entrez votre prénom" required>
+
+                <label>Âge :</label>
+                <input type="number" name="age" placeholder="Entrez votre âge" required>
+
+                <label>Numéro téléphone :</label>
+                <input type="tel" name="telephone" placeholder="Ex: 06 12 34 56 78" required>
+
+                <label>Email :</label>
+                <input type="email" name="email" placeholder="Entrez votre email" required>
+
+                <label>Adresse :</label>
+                <input type="text" name="adresse" placeholder="Entrez votre adresse" required>
+                
+                <div class="ligne">
+                    <div>
+                        <label>Code postal :</label>
+                        <input type="text" name="codepostal" placeholder="75000" required>
+                    </div>
+                    <div>
+                        <label>Ville :</label>
+                        <input type="text" name="ville" placeholder="Paris" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="valide">VALIDE</button>
+            </form>
+        </div>
+    </div>
+</header1>
+</body1>
+</html>
