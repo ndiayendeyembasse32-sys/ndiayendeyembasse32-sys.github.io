@@ -5,91 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Ndeye Mbasse Ndiaye</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
-        header { background-color: #2c3e50; color: white; padding: 60px 20px; text-align: center; }
-        h1 { margin: 0; font-size: 2.8em; }
-        .subtitle { color: #ecf0f1; font-size: 1.2em; margin-top: 10px; font-weight: 300; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f9; color: #333; line-height: 1.6; }
         
-        h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 50px; }
-        
-        .btn { display: inline-block; padding: 12px 25px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background-color: #2980b9; transform: scale(1.05); }
+        /* NOUVEL EN-TÊTE MODERNE */
+        header { 
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Dégradé dynamique et chaleureux */
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white; 
+            padding: 100px 20px; 
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Découpe moderne en bas */
+        }
 
-        /* Grilles */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 3.5em; 
+            letter-spacing: 3px; 
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .header-subtitle {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .header-btns { margin-top: 40px; }
+
+        .btn-modern {
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 10px;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary { background: white; color: #b21f1f; }
+        .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        .btn-secondary { border-color: white; color: white; }
+        .btn-secondary:hover { background: white; color: #1a2a6c; }
+
+        /* RESTE DU DESIGN */
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        h2 { color: #2c3e50; border-bottom: 3px solid #fdbb2d; padding-bottom: 10px; margin-top: 60px; }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
         
-        /* Cartes */
-        .card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
+        .card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         
-        .card-title { color: #2c3e50; font-size: 1.4em; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .card-title { color: #1a2a6c; font-size: 1.4em; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: bold; }
         
-        /* Tags */
         .tags { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag { background-color: #e9ecef; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; color: #555; font-weight: 500; }
-        .tag-special { background-color: #27ae60; color: white; }
+        .tag { background-color: #f0f2f5; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; color: #555; font-weight: 600; }
+        .tag-blue { background-color: #1a2a6c; color: white; }
 
-        /* Images Slider */
         .img-slider { display: flex; overflow-x: auto; gap: 10px; padding-bottom: 15px; scroll-snap-type: x mandatory; }
-        .img-slider img { width: 100%; height: auto; border-radius: 8px; flex: none; scroll-snap-align: center; border: 1px solid #ddd; }
+        .img-slider img { width: 100%; height: auto; border-radius: 10px; flex: none; scroll-snap-align: center; border: 1px solid #ddd; }
 
-        footer { text-align: center; margin-top: 80px; padding: 40px; background: #2c3e50; color: #bdc3c7; }
+        .project-btn { display: block; text-align: center; padding: 10px; background: #2c3e50; color: white; text-decoration: none; border-radius: 8px; margin-top: 20px; font-weight: bold; }
+
+        footer { text-align: center; margin-top: 100px; padding: 50px; background: #1a2a6c; color: white; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Ndeye Mbasse Ndiaye</h1>
-        <p class="subtitle">Étudiante en Architecture Réseau & Développeuse Fullstack | EPSI Paris</p>
-        <div style="margin-top: 20px;">
-            <a href="https://www.linkedin.com/in/ndeye-mbasse-ndiaye-a62281389" class="btn" target="_blank">LinkedIn</a>
-            <a href="cv.pdf" class="btn" download style="background-color:#e74c3c; margin-left:15px;">📄 Télécharger mon CV</a>
+        <p class="header-subtitle">Architecture Réseau & Développement Fullstack</p>
+        <p style="opacity: 0.8;">Étudiante à l'EPSI Paris | Spécialiste IT</p>
+        <div class="header-btns">
+            <a href="https://www.linkedin.com/in/ndeye-mbasse-ndiaye-a62281389" class="btn-modern btn-primary" target="_blank">LinkedIn</a>
+            <a href="cv.pdf" class="btn-modern btn-secondary" download>Télécharger mon CV</a>
         </div>
     </header>
 
     <div class="container">
         
-        <h2>📍 Expérience Professionnelle Actuelle</h2>
-        <div class="card" style="border-left: 6px solid #27ae60; margin-top: 25px;">
+        <h2>📍 Expérience Professionnelle</h2>
+        <div class="card" style="border-left: 8px solid #1a2a6c; margin-top: 25px;">
             <div class="card-title">🏢 NET-CO SERVICES</div>
-            <p><strong>Spécialiste IT & Réseaux (Stage) | Mai 2026 - Juillet 2026</strong></p>
-            <p>Accompagnement technique pour la transformation digitale et la maintenance des infrastructures d'une entreprise de services multisectoriels.</p>
+            <p><strong>Spécialiste Informatique & Réseaux (Stage) | Mai 2026 - Juillet 2026</strong></p>
+            <p>Soutien technique pour l'amélioration des outils numériques et la maintenance du réseau interne.</p>
             <ul style="padding-left: 20px;">
-                <li>Administration et optimisation du site vitrine sous <strong>WordPress 6</strong> (Thème Bravada).</li>
-                <li>Maintenance du parc informatique et support technique aux utilisateurs.</li>
-                <li>Audit de la sécurité réseau et gestion des bases de données de services. </li>
+                <li>Gestion et mise à jour du site internet sous <strong>WordPress 6</strong>.</li>
+                <li>Maintenance des ordinateurs et aide technique aux équipes administratives.</li>
+                <li>Vérification de la sécurité du réseau local et des accès sans fil.</li>
             </ul>
             <div class="tags">
-                <span class="tag tag-special">Infrastructure IT</span>
-                <span class="tag">Administration CMS</span>
+                <span class="tag tag-blue">Maintenance IT</span>
+                <span class="tag">Gestion WordPress</span>
                 <span class="tag">Support Réseau</span>
             </div>
         </div>
 
         <h2>🏆 Certifications Officielles</h2>
         <div class="grid">
-            
-            <div class="card" style="border-top: 4px solid #21759b;">
-                <div class="card-title">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="25" alt="LinkedIn">
-                    L'essentiel de WordPress 6
-                </div>
-                <p>Maîtrise de la gestion de contenu, des thèmes et de l'administration avancée.</p>
-                <p style="font-size: 0.8em; color: #888;">ID: 3lea00felc7ec8f4deecf8861f753e3b9933e9cf0c51e86a5bca7ec35e756438 </p>
-                <div class="tags"><span class="tag">CMS</span><span class="tag">Design</span><span class="tag">Web</span></div>
+            <div class="card" style="border-top: 5px solid #21759b;">
+                <div class="card-title">L'essentiel de WordPress 6</div>
+                <p>Maîtrise de la gestion de contenu, des thèmes et de l'administration avancée via LinkedIn Learning.</p>
+                <p style="font-size: 0.85em; color: #888;">ID: 3lea00felc7ec8f4deecf8861f753e3b9933e9cf0c51e86a5bca7ec35e756438</p>
+                <div class="tags"><span class="tag">CMS</span><span class="tag">Design Web</span></div>
             </div>
 
-            <div class="card" style="border-top: 4px solid #777bb4;">
-                <div class="card-title">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="25" alt="LinkedIn">
-                    PHP et MySQL : L'essentiel
-                </div>
-                <p>Développement de bases de données relationnelles et logique backend. </p>
-                <p style="font-size: 0.8em; color: #888;">ID: e6e8755a4f360133d7d9e7d947ff772e68fca576cd4f6e28465c2fbfc3b9a5a9 </p>
-                <div class="tags"><span class="tag">Backend</span><span class="tag">SQL</span><span class="tag">Programmation</span></div>
+            <div class="card" style="border-top: 5px solid #777bb4;">
+                <div class="card-title">PHP et MySQL : L'essentiel</div>
+                <p>Développement de bases de données relationnelles et logique métier backend via LinkedIn Learning.</p>
+                <p style="font-size: 0.85em; color: #888;">ID: e6e8755a4f360133d7d9e7d947ff772e68fca576cd4f6e28465c2fbfc3b9a5a9</p>
+                <div class="tags"><span class="tag">Backend</span><span class="tag">Base de données</span></div>
             </div>
-
         </div>
 
         <h2 style="text-align: center;">📁 Réalisations Techniques</h2>
@@ -97,33 +135,33 @@
             
             <div class="card">
                 <div class="img-slider">
-                    <img src="smartbike1.PNG" alt="SmartBike Accueil">
-                    <img src="smartbike2.PNG" alt="SmartBike Panier">
+                    <img src="smartbike1.PNG" alt="SmartBike">
+                    <img src="smartbike2.PNG" alt="SmartBike">
                 </div>
                 <div class="card-title">🛒 SmartBike E-Commerce</div>
-                <p>Application web complète intégrant un système de panier et une gestion admin PHP/MySQL. </p>
-                <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">E-shop</span></div>
-                <a href="https://github.com/ndiayendeyembasse32-sys/ndiayendeyembasse32-sys.github.io" target="_blank" class="btn" style="width: 85%; text-align: center; background-color: #2c3e50;">Code Source</a>
+                <p>Application web complète avec système de panier et interface d'administration sécurisée.</p>
+                <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+                <a href="https://github.com/ndiayendeyembasse32-sys/ndiayendeyembasse32-sys.github.io" target="_blank" class="project-btn">Voir le Code</a>
             </div>
 
             <div class="card">
-                <div class="card-title">🔐 Infrastructure Sécurisée</div>
-                <p>Mise en place d'une architecture réseau d'entreprise : Pare-feu pfSense, VPN Site-à-Site et monitoring Zabbix. </p>
-                <div class="tags"><span class="tag">Réseau</span><span class="tag">pfSense</span><span class="tag">Sécurité</span></div>
-                <a href="infra.pdf" class="btn" target="_blank" style="width: 85%; text-align: center; background-color: #d35400;">Dossier Technique</a>
+                <div class="card-title">🔐 Infrastructure Réseau</div>
+                <p>Déploiement d'une architecture sécurisée avec pfSense, VPN Site-à-Site et monitoring Zabbix.</p>
+                <div class="tags"><span class="tag">Réseau</span><span class="tag">pfSense</span><span class="tag">Zabbix</span></div>
+                <a href="infra.pdf" class="project-btn" target="_blank" style="background: #d35400;">Dossier Technique</a>
             </div>
 
             <div class="card">
                 <div class="card-title">⚔️ RPG Historique (Python)</div>
-                <p>Jeu de rôle textuel basé sur la culture africaine. Focus sur la Programmation Orientée Objet (POO). </p>
-                <div class="tags"><span class="tag">Python</span><span class="tag">POO</span><span class="tag">Algorithmique</span></div>
-                <a href="https://github.com/ndiayendeyembasse32-sys/POO-" class="btn" style="width: 85%; text-align: center; background-color: #2c3e50;">Voir le Code</a>
+                <p>Jeu de rôle orienté objet mettant en lumière des figures historiques africaines.</p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">POO</span><span class="tag">Culture</span></div>
+                <a href="https://github.com/ndiayendeyembasse32-sys/POO-" target="_blank" class="project-btn">Voir le Code</a>
             </div>
 
             <div class="card">
                 <div class="card-title">🌱 MBAY TECH - IoT</div>
-                <p>Système intelligent de suivi agricole avec capteurs d'humidité et microcontrôleurs ESP32. </p>
-                <div class="tags"><span class="tag">IoT</span><span class="tag">ESP32</span><span class="tag">Agriculture</span></div>
+                <p>Solution connectée de suivi agricole utilisant des microcontrôleurs et des capteurs d'humidité.</p>
+                <div class="tags"><span class="tag">IoT</span><span class="tag">ESP32</span><span class="tag">Smart Agri</span></div>
             </div>
 
         </div>
@@ -131,7 +169,7 @@
 
     <footer>
         <p>© 2026 Ndeye Mbasse Ndiaye - Future Experte en Architecture Réseau</p>
-        <p style="font-size: 0.8em; margin-top: 10px;">Propulsé par la passion du code et de l'infrastructure informatique.</p>
+        <p style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Passionnée par la Cybersécurité et le Développement.</p>
     </footer>
 
 </body>
